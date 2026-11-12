@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Kartlarım",
+    "slug": "kartlarim",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "kartlarim",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#0B0C0E",
+    "platforms": ["ios", "android"],
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0C0E"
+    },
+    "ios": {
+      "bundleIdentifier": "com.kartlarim.app",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Kartlarım güvenliğiniz için Face ID doğrulaması gerektirir."
+      }
+    },
+    "android": {
+      "package": "com.kartlarim.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0B0C0E"
+      },
+      "permissions": [
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Kartlarım güvenliğiniz için Face ID doğrulaması gerektirir."
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/IBMPlexMono-Medium.ttf"]
+        }
+      ]
+    ]
+  }
+}

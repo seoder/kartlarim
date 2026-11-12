@@ -1,0 +1,11 @@
+node_modules/
+.expo/
+android/
+ios/
+builds/
+*.keystore
+*.jks
+.env*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
